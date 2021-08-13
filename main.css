@@ -3,7 +3,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(80vw - 7.5rem));
+    transform: translateX(calc(80vw - 10vw));
   }
 }
 @keyframes pokeRun {
@@ -11,7 +11,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(80vw - 7.5rem));
+    transform: translateX(calc(80vw - 10vw));
   }
 }
 @-webkit-keyframes rotatePokemon {
@@ -89,13 +89,10 @@ body {
 }
 .games__background {
   width: 100%;
-  height: 10rem;
+  height: 20vw;
 }
 .games__background--gif {
   height: 30vw;
-}
-.games__background--track {
-  position: relative;
 }
 .games__track {
   background-image: url(./assets/image.png);
@@ -103,7 +100,6 @@ body {
   background-size: cover;
   display: flex;
   align-items: center;
-  height: 10rem;
   display: flex;
   z-index: -1;
 }
@@ -116,8 +112,8 @@ body {
   width: 100%;
 }
 .games__racer1--1 {
-  height: 5rem;
-  width: 5rem;
+  height: 10vw;
+  width: 10vw;
   border-radius: 100%;
 }
 .games__racer1--1-run {
@@ -138,8 +134,8 @@ body {
   width: 100%;
 }
 .games__racer2--2 {
-  height: 5rem;
-  width: 5rem;
+  height: 10vw;
+  width: 10vw;
   border-radius: 100%;
   margin-bottom: 1rem;
 }
