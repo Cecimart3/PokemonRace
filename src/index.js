@@ -11,15 +11,15 @@ const resetButton = document.querySelector('.get-pokemon__button--reset');
 const playerOptions = document.querySelectorAll('.get-pokemon__select');
 
 const victoryAudio = document.querySelector('.victory-song');
-// victoryAudio.volume = 0.3;
+victoryAudio.volume = 0.3;
 
 const openingAudio = document.querySelector('.opening-song');
 openingAudio.play();
-// openingAudio.volume = 0.3;
+openingAudio.volume = 0.3;
 
 
 const audio = document.querySelector('.race-song');
-// audio.volume = 0.3;
+audio.volume = 0.3;
 
 class AllPokemon {
     constructor(url, numPokemon) {
