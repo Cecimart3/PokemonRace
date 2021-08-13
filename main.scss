@@ -19,9 +19,9 @@ body {
 
     @keyframes UpandSmall {
 
-        100%  {transform: translateY(-50%);
-            transform: translateX(150%);
-            width: 10rem;
+        100%  {transform: translateY(-50%) ;
+            transform: translateX(110%);
+            width: 30vw;
           } 
        }
 }
@@ -85,7 +85,7 @@ body {
             // background-color: red;
             
             &-run {
-                animation: pokeRun 3s ease-in-out 1 forwards;
+                animation: pokeRun 3s ease-in-out 2s 1 forwards;
             }
             
             @keyframes racer1 {
@@ -111,7 +111,7 @@ body {
             // background-color: pink;
             
             &-run {
-                animation: pokeRun 3s ease-in-out 1 forwards;
+                animation: pokeRun 3s ease-in-out 2s 1 forwards;
             }
 
             @keyframes racer1 {
@@ -130,7 +130,64 @@ body {
             animation: rotatePokemon 0.2s ease-in-out infinite forwards;
         }
     }
-    &__pika {
-        height: 5rem;
+    // &__pika {
+    //     height: 5rem;
+    // }
+}
+
+.get-pokemon {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+
+    &__logos {
+        width: 100%;
+        // height: 5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    &__logo {
+        display: block;
+        margin:0 auto;
+    }
+
+    &__select{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 50%;
+        height: 2rem;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__button {
+        margin: 1rem;
+        letter-spacing: 2.4px;
+        background-color: $goldenyellow;
+        background: hsl(54, 100%, 50%), hsl(54, 100%, 40%);
+        border: solid 1px $goldenyellow hsl(54, 100%, 20%);
+        border-radius: 1rem;
+        font-size: 1.8rem;
+        color: $ceruleanblue;
+        text-shadow: 0 -1px 0 $goldfoil;
+        padding: 1rem;
+        margin-bottom: .9rem;
+
+        box-shadow: inset 0 1px 0 hsl(54, 100%, 50%),
+        0 2px 0 hsl(54, 100%, 20%),
+        0 3px 0 hsl(54, 100%, 18%),
+        0 4px 0 hsl(54, 100%, 16%),
+        0 5px 0 hsl(54, 100%, 14%),
+        0 6px 0 hsl(54, 100%, 12%),
+        0 7px 0 hsl(54, 100%, 10%),
+        0 8px 0 hsl(54, 100%, 8%),
+        0 9px 0 hsl(54, 100%, 6%);
     }
 }

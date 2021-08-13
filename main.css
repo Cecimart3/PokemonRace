@@ -3,7 +3,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(80vw - 10vw));
+    transform: translateX(calc(80vw - (10vw *1.2)));
   }
 }
 @keyframes pokeRun {
@@ -11,7 +11,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(80vw - 10vw));
+    transform: translateX(calc(80vw - (10vw *1.2)));
   }
 }
 @-webkit-keyframes rotatePokemon {
@@ -65,15 +65,15 @@ body {
 @-webkit-keyframes UpandSmall {
   100% {
     transform: translateY(-50%);
-    transform: translateX(150%);
-    width: 10rem;
+    transform: translateX(110%);
+    width: 30vw;
   }
 }
 @keyframes UpandSmall {
   100% {
     transform: translateY(-50%);
-    transform: translateX(150%);
-    width: 10rem;
+    transform: translateX(110%);
+    width: 30vw;
   }
 }
 
@@ -117,8 +117,8 @@ body {
   border-radius: 100%;
 }
 .games__racer1--1-run {
-  -webkit-animation: pokeRun 3s ease-in-out 1 forwards;
-          animation: pokeRun 3s ease-in-out 1 forwards;
+  -webkit-animation: pokeRun 3s ease-in-out 2s 1 forwards;
+          animation: pokeRun 3s ease-in-out 2s 1 forwards;
 }
 @-webkit-keyframes racer1 {
   100% {
@@ -140,8 +140,8 @@ body {
   margin-bottom: 1rem;
 }
 .games__racer2--2-run {
-  -webkit-animation: pokeRun 3s ease-in-out 1 forwards;
-          animation: pokeRun 3s ease-in-out 1 forwards;
+  -webkit-animation: pokeRun 3s ease-in-out 2s 1 forwards;
+          animation: pokeRun 3s ease-in-out 2s 1 forwards;
 }
 @keyframes racer1 {
   100% {
@@ -155,6 +155,45 @@ body {
   -webkit-animation: rotatePokemon 0.2s ease-in-out infinite forwards;
           animation: rotatePokemon 0.2s ease-in-out infinite forwards;
 }
-.games__pika {
-  height: 5rem;
+
+.get-pokemon {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+}
+.get-pokemon__logos {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.get-pokemon__logo {
+  display: block;
+  margin: 0 auto;
+}
+.get-pokemon__select {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 50%;
+  height: 2rem;
+}
+.get-pokemon__buttons {
+  display: flex;
+}
+.get-pokemon__button {
+  margin: 1rem;
+  letter-spacing: 2.4px;
+  background-color: #ffde00;
+  background: #ffe600, #ccb800;
+  border: solid 1px #ffde00 #665c00;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+  color: #3b4cca;
+  text-shadow: 0 -1px 0 #b3a125;
+  padding: 1rem;
+  margin-bottom: 0.9rem;
+  box-shadow: inset 0 1px 0 #ffe600, 0 2px 0 #665c00, 0 3px 0 #5c5300, 0 4px 0 #524900, 0 5px 0 #474000, 0 6px 0 #3d3700, 0 7px 0 #332e00, 0 8px 0 #292500, 0 9px 0 #1f1c00;
 }/*# sourceMappingURL=main.css.map */

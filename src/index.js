@@ -6,11 +6,20 @@ const container = [
     document.querySelector('.games__racer1--1'),
     document.querySelector('.games__racer2--2')
 ]
-const startButton = document.querySelector('.start');
-const resetButton = document.querySelector('.reset');
+const startButton = document.querySelector('.get-pokemon__button--start');
+const resetButton = document.querySelector('.get-pokemon__button--reset');
 const playerOptions = document.querySelectorAll('.get-pokemon__select');
 
+const victoryAudio = document.querySelector('.victory-song');
+// victoryAudio.volume = 0.3;
 
+const openingAudio = document.querySelector('.opening-song');
+openingAudio.play();
+// openingAudio.volume = 0.3;
+
+
+const audio = document.querySelector('.race-song');
+// audio.volume = 0.3;
 
 class AllPokemon {
     constructor(url, numPokemon) {
@@ -64,7 +73,7 @@ function fillIninputForm(playerOptions, gameClass) {
             playerOption,
             {
                 value: '',
-                innerText: '--Please select Pokemon--'
+                innerText: `-- Pokemon ${index+1} --`
             }
         )
 
@@ -143,6 +152,10 @@ function handleStartButton(event) {
         return;
     }
 
+    // audio!
+    openingAudio.pause();
+    audio.play();
+
     resetButton.disabled = true;
 
     container.forEach((pokemon, index) => {
@@ -162,11 +175,15 @@ function handlePokemonContainerEndAnimation(event){
     const img = event.target.firstChild;
     img.classList.remove('games__pokemon--run');
 
-
+    audio.pause();
+    victoryAudio.play();
     resetButton.disabled = false;
 }
 
 function handleResetButton(event) {
+    victoryAudio.pause();
+    openingAudio.play();
+
     container.forEach((pokemon, index) => {
         pokemon.classList.remove(`games__racer${index+1}--${index+1}-run`);
     })
@@ -178,6 +195,7 @@ function handleResetButton(event) {
     event.target.disabled = true;
     startButton.disabled = false;
 }
+
 
 
 

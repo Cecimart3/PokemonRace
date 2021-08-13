@@ -30,12 +30,30 @@
     </div>
 
     <form class="get-pokemon">
-        <label for="racer1">Pick first pokemon</label>
+        <div class="get-pokemon__logos">
+            <!-- <img class="get-pokemon__logo get-pokemon__logo--start" src="https://fontmeme.com/permalink/210813/242c99f0392538eca162c241fbb3b3c9.png" 
+            alt="pokemon-font"> -->
+            <img class="get-pokemon__logo get-pokemon__logo--pick" src="https://fontmeme.com/permalink/210813/6b47220538a3ac1de177c3f3cf0751e9.png" alt="pokemon-font">
+        </div>
+        <!-- <label class="get-pokemon__label" for="racer1">Pick 1st Pokemon</label> -->
         <select class="get-pokemon__select get-pokemon__select--1" name="racer1" id="racer1"></select>
-        <label for="racer1">Pick first pokemon</label>
+        <!-- <label class="get-pokemon__label" for="racer1">Pick 2nd Pokemon</label> -->
         <select class="get-pokemon__select get-pokemon__select--2" name="racer2" id="racer2"></select>
-        <input class="start" type="submit" value="START!">
+        <div class="get-pokemon__buttons">
+            <input class="get-pokemon__button get-pokemon__button--start" type="submit" value="START!">
+        <button class="get-pokemon__button get-pokemon__button--reset" disabled>RESET</button>
+        </div>
+        
     </form>
-    <button class="reset" disabled>RESET</button>
+
+    <audio class="race-song">
+        <source src="/assets/101-opening.mp3" type="audio/mpeg">
+    </audio>
+    <audio class="opening-song">
+        <source src="/assets/110-pokemon-center.mp3"type="audio/mpeg">
+    </audio>
+    <audio class="victory-song">
+        <source src="/assets/108-victory.mp3"type="audio/mpeg">
+    </audio>
 </body>
 </html>
