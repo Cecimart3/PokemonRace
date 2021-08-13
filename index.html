@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/index.js"></script>
+    <title>POKEMON RACE!</title>
 </head>
 <body>
     <div class="imageH">
@@ -26,6 +28,14 @@
             <!-- <img class="games__pika" src="/assets/Pika.gif" alt=""> -->
         </div>
     </div>
-    
+
+    <form class="get-pokemon">
+        <label for="racer1">Pick first pokemon</label>
+        <select class="get-pokemon__select get-pokemon__select--1" name="racer1" id="racer1"></select>
+        <label for="racer1">Pick first pokemon</label>
+        <select class="get-pokemon__select get-pokemon__select--2" name="racer2" id="racer2"></select>
+        <input class="start" type="submit" value="START!">
+    </form>
+    <button class="reset" disabled>RESET</button>
 </body>
 </html>

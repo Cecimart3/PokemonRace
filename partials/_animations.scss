@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+@keyframes pokeRun {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(80vw - #{$pokemon-size * 1.5}));
+    }    
+}
+
+@keyframes rotatePokemon {
+    0% {
+        transform: rotate(0) scaleX(-1);
+    }
+
+    25% {
+        transform: rotate(-15deg) scaleX(-1);
+    }
+
+    50% {
+        transform: rotate(0) scaleX(-1);
+    }
+
+    75% {
+        transform: rotate(15deg) scaleX(-1);
+    }
+
+    100% {
+        transform: rotate(0) scaleX(-1);
+    }
+}

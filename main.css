@@ -1,3 +1,53 @@
+@-webkit-keyframes pokeRun {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(80vw - 7.5rem));
+  }
+}
+@keyframes pokeRun {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(80vw - 7.5rem));
+  }
+}
+@-webkit-keyframes rotatePokemon {
+  0% {
+    transform: rotate(0) scaleX(-1);
+  }
+  25% {
+    transform: rotate(-15deg) scaleX(-1);
+  }
+  50% {
+    transform: rotate(0) scaleX(-1);
+  }
+  75% {
+    transform: rotate(15deg) scaleX(-1);
+  }
+  100% {
+    transform: rotate(0) scaleX(-1);
+  }
+}
+@keyframes rotatePokemon {
+  0% {
+    transform: rotate(0) scaleX(-1);
+  }
+  25% {
+    transform: rotate(-15deg) scaleX(-1);
+  }
+  50% {
+    transform: rotate(0) scaleX(-1);
+  }
+  75% {
+    transform: rotate(15deg) scaleX(-1);
+  }
+  100% {
+    transform: rotate(0) scaleX(-1);
+  }
+}
 body {
   background-color: red;
 }
@@ -32,7 +82,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 5%;
+  margin-left: auto;
+  margin-right: auto;
   border: solid 2rem yellow;
   border-radius: 1rem;
 }
@@ -59,21 +110,19 @@ body {
 .games__racers {
   z-index: 1;
   position: absolute;
-  height: 8rem;
-  margin-top: 1rem;
   width: 100%;
 }
 .games__racer1 {
   width: 100%;
-  -webkit-animation: racer1 5s ease-in-out 2s forwards;
-          animation: racer1 5s ease-in-out 2s forwards;
 }
 .games__racer1--1 {
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 100%;
-  margin-bottom: 1rem;
-  background-color: red;
+}
+.games__racer1--1-run {
+  -webkit-animation: pokeRun 3s ease-in-out 1 forwards;
+          animation: pokeRun 3s ease-in-out 1 forwards;
 }
 @-webkit-keyframes racer1 {
   100% {
@@ -87,20 +136,28 @@ body {
 }
 .games__racer2 {
   width: 100%;
-  -webkit-animation: racer1 5.5s linear 2s forwards;
-          animation: racer1 5.5s linear 2s forwards;
 }
 .games__racer2--2 {
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
+  width: 5rem;
   border-radius: 100%;
   margin-bottom: 1rem;
-  background-color: pink;
+}
+.games__racer2--2-run {
+  -webkit-animation: pokeRun 3s ease-in-out 1 forwards;
+          animation: pokeRun 3s ease-in-out 1 forwards;
 }
 @keyframes racer1 {
   100% {
     transform: translateX(90%);
   }
+}
+.games__pokemon {
+  transform: scaleX(-1);
+}
+.games__pokemon--run {
+  -webkit-animation: rotatePokemon 0.2s ease-in-out infinite forwards;
+          animation: rotatePokemon 0.2s ease-in-out infinite forwards;
 }
 .games__pika {
   height: 5rem;
