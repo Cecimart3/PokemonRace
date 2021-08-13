@@ -3,7 +3,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(80vw - (10vw *1.2)));
+    transform: translateX(calc(80vw - (10vw * 1.2)));
   }
 }
 @keyframes pokeRun {
@@ -11,7 +11,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(80vw - (10vw *1.2)));
+    transform: translateX(calc(80vw - (10vw * 1.2)));
   }
 }
 @-webkit-keyframes rotatePokemon {
@@ -55,8 +55,8 @@ body {
 .imageH {
   position: relative;
   width: 100%;
-  -webkit-animation: UpandSmall 1s ease-in 0s forwards;
-          animation: UpandSmall 1s ease-in 0s forwards;
+  -webkit-animation: UpandSmall 1s ease-in 3s forwards;
+          animation: UpandSmall 1s ease-in 3s forwards;
 }
 .imageH__image {
   width: 100%;

@@ -5,7 +5,7 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(calc(80vw - (#{$pokemon-size} *1.2)));
+        transform: translateX(calc(80vw - (#{$pokemon-size} * 1.2)));
     }    
 }
 
