@@ -39,14 +39,14 @@ class AllPokemon {
     getPokemon(pokeIndex) {
         const getConfig = {
             method: 'GET',
-            url: pokeURL + '/' + (pokeIndex+1)
+            url: pokeURL + '/' + (pokeIndex)
         }
 
         return axios(getConfig)
         .then(response => {
             console.log(response)
             return {
-                name: this.pokemonList[pokeIndex],
+                name: this.pokemonList[pokeIndex-1],
                 img: response.data.sprites.front_default,
                 weight: response.data.weight,
                 attackSpeed: response.data.stats[5].base_stat
@@ -95,13 +95,16 @@ function fillIninputForm(playerOptions, gameClass) {
                 container[index].removeChild(container[index].firstChild)
             }
 
+            const duration = player.weight/player.attackSpeed;
+            container[index].setAttribute('style', `animation-duration: ${duration}s`)
+
             createElement(
                 'img',
                 container[index],
                 {
                     src: player.img,
                     classList: ['games__pokemon', `games__pokemon--${index+1}`],
-                    style: "width: auto; height: 100%;",
+                    style:`width: auto; height: 100%;`,
                     alt: capitalize(player.name)
                 }
             )
@@ -147,6 +150,10 @@ function handleStartButton(event) {
         pokemon.firstChild.classList.add('games__pokemon--run');
     })
 
+    playerOptions.forEach(playerOption => {
+        playerOption.disabled = true;
+    })
+
     event.target.disabled = true;
 }
 
@@ -162,6 +169,10 @@ function handlePokemonContainerEndAnimation(event){
 function handleResetButton(event) {
     container.forEach((pokemon, index) => {
         pokemon.classList.remove(`games__racer${index+1}--${index+1}-run`);
+    })
+
+    playerOptions.forEach(playerOption => {
+        playerOption.disabled = false;
     })
 
     event.target.disabled = true;
